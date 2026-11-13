@@ -82,6 +82,24 @@ body{
   color:var(--text) !important;
 }
 
+
+
+/* Premium scrolling offer banner: contained entirely within the hero */
+.hero{overflow:hidden;isolation:isolate}
+.hero-video{z-index:0}
+.hero-video-overlay{z-index:1}
+.glow-orb{z-index:2}
+.hero-inner{z-index:3}
+.hero-marquee{position:absolute;top:76px;left:0;width:100%;overflow:hidden;white-space:nowrap;z-index:5;padding:15px 0;background:linear-gradient(100deg,rgba(5,20,43,.96),rgba(18,64,112,.96) 30%,rgba(9,28,58,.97) 65%,rgba(5,20,43,.96));border-top:1px solid rgba(255,220,145,.7);border-bottom:1px solid rgba(112,190,255,.65);box-shadow:0 7px 28px rgba(0,0,0,.36),0 0 22px rgba(75,157,255,.22)}
+.marquee-track{display:flex;width:max-content;animation:marquee-scroll 34s linear infinite}
+.marquee-copy{display:flex;align-items:center;gap:16px;padding-right:24px;font-size:clamp(16px,1.7vw,22px);font-weight:850;letter-spacing:.025em;text-transform:none;color:#f7fbff;text-shadow:0 2px 10px rgba(0,0,0,.55)}
+.marquee-copy strong{color:#fff2c6;text-shadow:0 0 13px rgba(255,203,103,.42)}
+.marquee-copy b{color:#07182e;background:linear-gradient(100deg,#fff0b8,#ffc95c,#fff0b8);padding:6px 12px;border-radius:7px;font-size:1.08em;text-shadow:none;box-shadow:0 0 18px rgba(255,194,79,.3)}
+.marquee-copy span{color:#bfe2ff}
+.marquee-copy em{font-style:normal;color:#ffcf72;font-weight:950}
+@keyframes marquee-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(max-width:720px){.hero-marquee{top:65px;padding:13px 0}.marquee-copy{font-size:16px;gap:12px;letter-spacing:0}.marquee-copy b{padding:6px 9px}.marquee-track{animation-duration:42s}}
+
 </style>
 
 <!-- Google Analytics 4 -->
@@ -194,6 +212,12 @@ hr,.divider{
     <source src="hero-video.mp4" type="video/mp4">
   </video>
   <div class="hero-video-overlay"></div>
+  <div class="hero-marquee" aria-label="Limited time domain offer">
+    <div class="marquee-track">
+      <div class="marquee-copy">🔥 <strong>LIMITED-TIME EXCLUSIVE OFFER!</strong> <span>Own This Premium Domain for</span> <b>Just $499!</b> 🏆 <em>Lowest Price – Special Offer Valid for 10 Days Only!</em> ⏳ <span>Don't Miss Out! This Exclusive Deal Won't Last Forever.</span> 🌐 <strong>Visit Sedo.com and Click the "Buy This Domain" Button Below to Secure It Today!</strong></div>
+      <div class="marquee-copy" aria-hidden="true">🔥 <strong>LIMITED-TIME EXCLUSIVE OFFER!</strong> <span>Own This Premium Domain for</span> <b>Just $499!</b> 🏆 <em>Lowest Price – Special Offer Valid for 10 Days Only!</em> ⏳ <span>Don't Miss Out! This Exclusive Deal Won't Last Forever.</span> 🌐 <strong>Visit Sedo.com and Click the "Buy This Domain" Button Below to Secure It Today!</strong></div>
+    </div>
+  </div>
   <div class="glow-orb"></div>
   <div class="hero-inner">
     <div class="premium-sale-tag">This Domain Is For Sale</div>
@@ -203,46 +227,7 @@ hr,.divider{
     <p class="tagline">A memorable, distinctive and highly brandable domain name built for shipping, logistics, gaming, cargo or a modern global brand.</p>
     <div class="actions">
       <a class="btn primary" href="mailto:urbrandmaker@gmail.com?subject=odinship.com%20-%20i%20want%20to%20buy%20this%20domain">Contact Seller</a>
-      <form action="https://www.escrow.com/checkout" method="post" target="_blank" class="inline-form">
-<input type="hidden" name="type" value="domain_name">
-<input type="hidden" name="non_initiator_email" value="chefravidutta@gmail.com">
-<input type="hidden" name="non_initiator_id" value="3906931">
-<input type="hidden" name="non_initiator_role" value="seller">
-<input type="hidden" name="title" value="Private Acquisition">
-<input type="hidden" name="currency" value="USD">
-<input type="hidden" name="domain" value="OdinShip.Com">
-<input type="hidden" name="price" value="1499">
-<input type="hidden" name="concierge" value="false">
-<input type="hidden" name="with_content" value="false">
-<input type="hidden" name="inspection_period" value="1">
-<input type="hidden" name="fee_payer" value="split">
-<input type="hidden" name="return_url" value="https://www.odinship.com">
-<input type="hidden" name="button_types" value="both">
-<input type="hidden" name="auto_accept" value="599">
-<input type="hidden" name="auto_reject" value="448">
-<input type="hidden" name="item_key" value="OdinShip.Com">
-<button class="btn secondary" type="submit">Buy This Domain</button>
-</form>
-      <form action="https://www.escrow.com/offer" method="post" target="_blank" class="inline-form">
-<input type="hidden" name="type" value="domain_name">
-<input type="hidden" name="non_initiator_email" value="chefravidutta@gmail.com">
-<input type="hidden" name="non_initiator_id" value="3906931">
-<input type="hidden" name="non_initiator_role" value="seller">
-<input type="hidden" name="title" value="Private Acquisition">
-<input type="hidden" name="currency" value="USD">
-<input type="hidden" name="domain" value="OdinShip.Com">
-<input type="hidden" name="price" value="1499">
-<input type="hidden" name="concierge" value="false">
-<input type="hidden" name="with_content" value="false">
-<input type="hidden" name="inspection_period" value="1">
-<input type="hidden" name="fee_payer" value="split">
-<input type="hidden" name="return_url" value="https://www.odinship.com">
-<input type="hidden" name="button_types" value="both">
-<input type="hidden" name="auto_accept" value="599">
-<input type="hidden" name="auto_reject" value="448">
-<input type="hidden" name="item_key" value="OdinShip.Com">
-<button class="btn secondary" type="submit">Send Offer Price</button>
-</form>
+      <a class="btn secondary" href="https://sedo.com/search/details/?domain=odinship.com" target="_blank" rel="noopener noreferrer">Buy This Domain</a>
     </div>
   </div>
 </section>
@@ -275,7 +260,7 @@ hr,.divider{
   </div>
   <div class="offer" id="offer">
     <h2>Make OdinShip.com Yours</h2>
-    <p>Interested in acquiring this premium domain? Start with a purchase or submit an offer.</p>
+    <p>Interested in acquiring this premium domain? Contact the seller or use the Buy This Domain button above.</p>
   </div>
 </div>
 </section>
